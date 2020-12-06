@@ -5,4 +5,8 @@
     <RootNamespace>gateway_app.MockData</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\gateway-app\gateway-app.csproj" />
+  </ItemGroup>
+
 </Project>

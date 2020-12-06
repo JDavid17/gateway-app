@@ -1,0 +1,15 @@
+C:\Users\jdavi\source\repos\gateway-app\gateway-app.MockData\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\jdavi\source\repos\gateway-app\gateway-app.MockData\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\jdavi\source\repos\gateway-app\gateway-app.MockData\bin\Debug\netcoreapp3.1\gateway-app.exe
+C:\Users\jdavi\source\repos\gateway-app\gateway-app.MockData\bin\Debug\netcoreapp3.1\gateway-app.MockData.deps.json
+C:\Users\jdavi\source\repos\gateway-app\gateway-app.MockData\bin\Debug\netcoreapp3.1\gateway-app.MockData.dll
+C:\Users\jdavi\source\repos\gateway-app\gateway-app.MockData\bin\Debug\netcoreapp3.1\gateway-app.MockData.pdb
+C:\Users\jdavi\source\repos\gateway-app\gateway-app.MockData\bin\Debug\netcoreapp3.1\gateway-app.dll
+C:\Users\jdavi\source\repos\gateway-app\gateway-app.MockData\bin\Debug\netcoreapp3.1\gateway-app.pdb
+C:\Users\jdavi\source\repos\gateway-app\gateway-app.MockData\obj\Debug\netcoreapp3.1\gateway-app.MockData.csprojAssemblyReference.cache
+C:\Users\jdavi\source\repos\gateway-app\gateway-app.MockData\obj\Debug\netcoreapp3.1\gateway-app.MockData.AssemblyInfoInputs.cache
+C:\Users\jdavi\source\repos\gateway-app\gateway-app.MockData\obj\Debug\netcoreapp3.1\gateway-app.MockData.AssemblyInfo.cs
+C:\Users\jdavi\source\repos\gateway-app\gateway-app.MockData\obj\Debug\netcoreapp3.1\gateway-app.MockData.csproj.CoreCompileInputs.cache
+C:\Users\jdavi\source\repos\gateway-app\gateway-app.MockData\obj\Debug\netcoreapp3.1\gateway-app.MockData.csproj.CopyComplete
+C:\Users\jdavi\source\repos\gateway-app\gateway-app.MockData\obj\Debug\netcoreapp3.1\gateway-app.MockData.dll
+C:\Users\jdavi\source\repos\gateway-app\gateway-app.MockData\obj\Debug\netcoreapp3.1\gateway-app.MockData.pdb

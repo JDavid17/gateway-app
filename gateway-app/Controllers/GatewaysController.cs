@@ -20,14 +20,14 @@ namespace gateway_app.Controllers
             _context = context;
         }
 
-        // GET: api/gateway
+        // GET: api/gateways
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Gateway>>> GetGateways()
         {
             return await _context.Gateways.Include(x => x.Peripherals).ToListAsync();
         }
 
-        // GET: api/gateway/5
+        // GET: api/gateways/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Gateway>> GetGateway(int id)
         {
@@ -41,7 +41,7 @@ namespace gateway_app.Controllers
             return gateway;
         }
 
-        // PUT: api/gateway/5
+        // PUT: api/gateways/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutGateway(int id, Gateway gateway)
         {
@@ -71,7 +71,7 @@ namespace gateway_app.Controllers
             return NoContent();
         }
 
-        //POST: api/gateway/1/add_peripheral
+        //POST: api/gateways/1/add_peripheral
         [HttpPost("{id}/add_peripheral")]
         public async Task<ActionResult<Gateway>> AddPeripheral(int id, Peripheral peripheral)
         {
@@ -85,10 +85,10 @@ namespace gateway_app.Controllers
             _context.Peripherals.Add(peripheral);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetGateway", new { id = id, peripheral.Gateway });
+            return CreatedAtAction("GetGateway", new { id = id }, peripheral.Gateway);
         }
 
-        // POST: api/gateway
+        // POST: api/gateways
         [HttpPost]
         public async Task<ActionResult<Gateway>> PostGateway(Gateway gateway)
         {
@@ -98,7 +98,7 @@ namespace gateway_app.Controllers
             return CreatedAtAction("GetGateway", new { id = gateway.Id }, gateway);
         }
 
-        // DELETE: api/gateway/5
+        // DELETE: api/gateways/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<Gateway>> DeleteGateway(int id)
         {
