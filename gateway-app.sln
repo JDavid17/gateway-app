@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gateway-app", "gateway-app\gateway-app.csproj", "{14A16032-83D3-4887-ABB6-574F297142CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gateway-app", "gateway-app\gateway-app.csproj", "{14A16032-83D3-4887-ABB6-574F297142CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gateway-app.UnitTest", "gateway-app.UnitTest\gateway-app.UnitTest.csproj", "{F8C5B32D-F186-43CE-BC2B-8FE86873698F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gateway-app.MockData", "gateway-app.MockData\gateway-app.MockData.csproj", "{C7155FC8-F87F-4E82-8A42-A082EDE6EC27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{14A16032-83D3-4887-ABB6-574F297142CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14A16032-83D3-4887-ABB6-574F297142CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14A16032-83D3-4887-ABB6-574F297142CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8C5B32D-F186-43CE-BC2B-8FE86873698F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8C5B32D-F186-43CE-BC2B-8FE86873698F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8C5B32D-F186-43CE-BC2B-8FE86873698F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8C5B32D-F186-43CE-BC2B-8FE86873698F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7155FC8-F87F-4E82-8A42-A082EDE6EC27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7155FC8-F87F-4E82-8A42-A082EDE6EC27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7155FC8-F87F-4E82-8A42-A082EDE6EC27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7155FC8-F87F-4E82-8A42-A082EDE6EC27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

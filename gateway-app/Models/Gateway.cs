@@ -1,17 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using gateway_app.CustomValidation;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace gateway_app.Models
 {
     public class Gateway
     {
+        //Constructor
+        public Gateway()
+        {
+            Peripherals = new List<Peripheral>();
+        }
+
+        //Properties
         public int Id { get; set; }
         public string SerialNumber { get; set; }
         public string Name { get; set; }
-        [RegularExpression("^(?:[0-9]{1,3}\\.){3}[0-9]{1,3}$")]
+        [ValidIpv4]
         public string Ipv4 { get; set; }
+
+        //DB Relations
+        [ValidPeripheralCount]
+        public List<Peripheral> Peripherals { get; set; }
     }
 }

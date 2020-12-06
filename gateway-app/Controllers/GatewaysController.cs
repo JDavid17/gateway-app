@@ -9,13 +9,13 @@ using gateway_app.Models;
 
 namespace gateway_app.Controllers
 {
-    [Route("api/gateway")]
+    [Route("api/[controller]")]
     [ApiController]
-    public class GatewayController : ControllerBase
+    public class GatewaysController : ControllerBase
     {
         private readonly GatewayAppContext _context;
 
-        public GatewayController(GatewayAppContext context)
+        public GatewaysController(GatewayAppContext context)
         {
             _context = context;
         }
@@ -24,7 +24,7 @@ namespace gateway_app.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Gateway>>> GetGateways()
         {
-            return await _context.Gateways.ToListAsync();
+            return await _context.Gateways.Include(x => x.Peripherals).ToListAsync();
         }
 
         // GET: api/gateway/5
@@ -69,6 +69,23 @@ namespace gateway_app.Controllers
             }
 
             return NoContent();
+        }
+
+        //POST: api/gateway/1/add_peripheral
+        [HttpPost("{id}/add_peripheral")]
+        public async Task<ActionResult<Gateway>> AddPeripheral(int id, Peripheral peripheral)
+        {
+            peripheral.GatewayId = id;
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
+            _context.Peripherals.Add(peripheral);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("GetGateway", new { id = id, peripheral.Gateway });
         }
 
         // POST: api/gateway

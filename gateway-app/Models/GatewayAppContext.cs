@@ -13,5 +13,6 @@ namespace gateway_app.Models
         }
 
         public DbSet<Gateway> Gateways { get; set; }
+        public DbSet<Peripheral> Peripherals { get; set; }
     }
 }

@@ -149,3 +149,6 @@ C:\Users\jdavi\source\repos\gateway-app\gateway-app\obj\Debug\netcoreapp3.1\gate
 C:\Users\jdavi\source\repos\gateway-app\gateway-app\obj\Debug\netcoreapp3.1\gateway-app.dll
 C:\Users\jdavi\source\repos\gateway-app\gateway-app\obj\Debug\netcoreapp3.1\gateway-app.pdb
 C:\Users\jdavi\source\repos\gateway-app\gateway-app\obj\Debug\netcoreapp3.1\gateway-app.genruntimeconfig.cache
+C:\Users\jdavi\source\repos\gateway-app\gateway-app\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\jdavi\source\repos\gateway-app\gateway-app\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\jdavi\source\repos\gateway-app\gateway-app\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
