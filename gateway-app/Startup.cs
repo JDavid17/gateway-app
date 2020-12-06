@@ -56,17 +56,17 @@ namespace gateway_app
 
                 context.Gateways.AddRange(new List<Gateway>()
                 {
-                    new Gateway() {Name = "CISCO 01", SerialNumber = Guid.NewGuid().ToString(), Ipv4 = "10.0.1410.1231", 
+                    new Gateway() {Name = "CISCO 01", SerialNumber = "1234567", Ipv4 = "10.6.100.66", 
                         Peripherals = new List<Peripheral>() 
                         {
                             new Peripheral() {Date = DateTime.UtcNow, Status = true, Vendor = "Logitec", UID = rnd.Next(100000, 1000000)},
                             new Peripheral() {Date = DateTime.UtcNow, Status = true, Vendor = "Dell", UID = rnd.Next(100000, 1000000)},
                             new Peripheral() {Date = DateTime.UtcNow, Status = false, Vendor = "Asus", UID = rnd.Next(100000, 1000000)}
                         } },
-                    new Gateway() {Name = "CISCO 02", SerialNumber = Guid.NewGuid().ToString(), Ipv4 = "10.0.0.2"},
-                    new Gateway() {Name = "CISCO 03", SerialNumber = Guid.NewGuid().ToString(), Ipv4 = "10.0.0.3"},
-                    new Gateway() {Name = "CISCO 04", SerialNumber = Guid.NewGuid().ToString(), Ipv4 = "10.0.0.4"},
-                    new Gateway() {Name = "CISCO 05", SerialNumber = Guid.NewGuid().ToString(), Ipv4 = "10.0.0.5"}
+                    new Gateway() {Name = "CISCO 02", SerialNumber = "1234565432", Ipv4 = "10.6.100.67"},
+                    new Gateway() {Name = "CISCO 03", SerialNumber = "12345654321", Ipv4 = "10.6.100.68"},
+                    new Gateway() {Name = "CISCO 04", SerialNumber = "123454321", Ipv4 = "10.6.100.69"},
+                    new Gateway() {Name = "CISCO 05", SerialNumber = "123456765432", Ipv4 = "10.6.100.670"}
                 });
             }
 

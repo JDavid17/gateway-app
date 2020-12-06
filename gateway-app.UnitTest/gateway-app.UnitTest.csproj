@@ -20,4 +20,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\gateway-app.MockData\gateway-app.MockData.csproj" />
+    <ProjectReference Include="..\gateway-app\gateway-app.csproj" />
+  </ItemGroup>
+
 </Project>

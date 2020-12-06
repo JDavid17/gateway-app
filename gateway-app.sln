@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gateway-app.UnitTest", "gat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gateway-app.MockData", "gateway-app.MockData\gateway-app.MockData.csproj", "{C7155FC8-F87F-4E82-8A42-A082EDE6EC27}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gateway-app.IntegrationTest", "gateway-app.IntegrationTest\gateway-app.IntegrationTest.csproj", "{1F9F9D09-BBD3-4F2F-87C5-084D5610DEF4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C7155FC8-F87F-4E82-8A42-A082EDE6EC27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7155FC8-F87F-4E82-8A42-A082EDE6EC27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7155FC8-F87F-4E82-8A42-A082EDE6EC27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F9F9D09-BBD3-4F2F-87C5-084D5610DEF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F9F9D09-BBD3-4F2F-87C5-084D5610DEF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F9F9D09-BBD3-4F2F-87C5-084D5610DEF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F9F9D09-BBD3-4F2F-87C5-084D5610DEF4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
