@@ -84,36 +84,36 @@ namespace gateway_app.IntegrationTest.API
             Assert.Equal(HttpStatusCode.NoContent, response.StatusCode);
         }
 
-        
-        //[Theory]
-        //[InlineData("POST", 1)]
-        //public async Task AddPeripherialToGatewayTest4(string httpMethod, int? id = null)
-        //{
-        //    // Arrange
-        //    var payload = new Dictionary<string, string>
-        //    {
-        //        {"UID", "777777" },
-        //        {"Vendor", "CyberPower"},
-        //        {"Date", "2020-12-06T17:30:59.0934534Z" },
-        //        {"Status", "true" }
-        //    };
 
-        //    string strPaylod = JsonConvert.SerializeObject(payload, Formatting.Indented);
-        //    HttpContent httpContent = new StringContent(strPaylod, Encoding.UTF8, "application/json");
+        [Theory]
+        [InlineData("POST", 1)]
+        public async Task AddPeripherialToGatewayTest4(string httpMethod, int? id = null)
+        {
+            // Arrange
+            var payload = new Dictionary<string, string>
+            {
+                {"UID", "777777" },
+                {"Vendor", "CyberPower"},
+                {"Date", "2020-12-06T17:30:59.0934534Z" },
+                {"Status", "true" }
+            };
 
-        //    HttpRequestMessage request = new HttpRequestMessage
-        //    {
-        //        Method = new HttpMethod(httpMethod),
-        //        Content = httpContent,
-        //        RequestUri = new Uri($"https://localhost:44397/api/gateways/{id}/add_peripheral")
-        //    };
+            string strPaylod = JsonConvert.SerializeObject(payload, Formatting.Indented);
+            HttpContent httpContent = new StringContent(strPaylod, Encoding.UTF8, "application/json");
 
-        //    // Act
-        //    var response = await _client.SendAsync(request);
+            HttpRequestMessage request = new HttpRequestMessage
+            {
+                Method = new HttpMethod(httpMethod),
+                Content = httpContent,
+                RequestUri = new Uri($"https://localhost:44397/api/gateways/{id}/add_peripheral")
+            };
 
-        //    // Assert
-        //    Assert.Equal(HttpStatusCode.Created, response.StatusCode);
-        //}
+            // Act
+            var response = await _client.SendAsync(request);
+
+            // Assert
+            Assert.Equal(HttpStatusCode.Created, response.StatusCode);
+        }
 
 
         [Theory]

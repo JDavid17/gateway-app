@@ -232,3 +232,8 @@ C:\Users\jdavi\source\repos\gateway-app\gateway-app.UnitTest\obj\Debug\netcoreap
 C:\Users\jdavi\source\repos\gateway-app\gateway-app.UnitTest\obj\Debug\netcoreapp3.1\gateway-app.UnitTest.dll
 C:\Users\jdavi\source\repos\gateway-app\gateway-app.UnitTest\obj\Debug\netcoreapp3.1\gateway-app.UnitTest.pdb
 C:\Users\jdavi\source\repos\gateway-app\gateway-app.UnitTest\obj\Debug\netcoreapp3.1\gateway-app.UnitTest.genruntimeconfig.cache
+C:\Users\jdavi\source\repos\gateway-app\gateway-app.UnitTest\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\jdavi\source\repos\gateway-app\gateway-app.UnitTest\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Newtonsoft.dll
+C:\Users\jdavi\source\repos\gateway-app\gateway-app.UnitTest\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\jdavi\source\repos\gateway-app\gateway-app.UnitTest\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\jdavi\source\repos\gateway-app\gateway-app.UnitTest\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll

@@ -10,12 +10,6 @@ namespace gateway_app.Models
 {
     public class Gateway
     {
-        //Constructor
-        public Gateway()
-        {
-            Peripherals = new List<Peripheral>();
-        }
-
         //Properties
         public int Id { get; set; }
         public string SerialNumber { get; set; }

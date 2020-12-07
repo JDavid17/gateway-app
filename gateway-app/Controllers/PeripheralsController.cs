@@ -50,6 +50,13 @@ namespace gateway_app.Controllers
                 return BadRequest();
             }
 
+            var gateway = await _context.Gateways.Include(x => x.Peripherals).FirstOrDefaultAsync(g => g.Id == peripheral.GatewayId);
+
+            if (gateway.Peripherals.Count >= 10)
+            {
+                return BadRequest("Gateway already has the max number of allow peripherals");
+            }
+
             _context.Entry(peripheral).State = EntityState.Modified;
 
             try
@@ -71,15 +78,15 @@ namespace gateway_app.Controllers
             return NoContent();
         }
 
-        // POST: api/Peripherals
-        [HttpPost]
-        public async Task<ActionResult<Peripheral>> PostPeripheral(Peripheral peripheral)
-        {
-            _context.Peripherals.Add(peripheral);
-            await _context.SaveChangesAsync();
+        //// POST: api/Peripherals
+        //[HttpPost]
+        //public async Task<ActionResult<Peripheral>> PostPeripheral(Peripheral peripheral)
+        //{
+        //    _context.Peripherals.Add(peripheral);
+        //    await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetPeripheral", new { id = peripheral.Id }, peripheral);
-        }
+        //    return CreatedAtAction("GetPeripheral", new { id = peripheral.Id }, peripheral);
+        //}
 
         // DELETE: api/Peripherals/5
         [HttpDelete("{id}")]

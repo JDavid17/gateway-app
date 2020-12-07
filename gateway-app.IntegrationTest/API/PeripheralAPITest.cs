@@ -85,35 +85,35 @@ namespace gateway_app.IntegrationTest.API
             Assert.Equal(HttpStatusCode.NoContent, response.StatusCode);
         }
 
-        [Theory]
-        [InlineData("POST")]
-        public async Task CreatePeripheralTest4(string httpMethod)
-        {
-            // Arrange
-            var payload = new Dictionary<string, string>
-            {
-                {"UID", "111111" },
-                {"Vendor", "I Buy Power"},
-                {"Date", "2020-12-06T17:30:59.0934534Z" },
-                {"Status", "true" }
-            };
+        //[Theory]
+        //[InlineData("POST")]
+        //public async Task CreatePeripheralTest4(string httpMethod)
+        //{
+        //    // Arrange
+        //    var payload = new Dictionary<string, string>
+        //    {
+        //        {"UID", "111111" },
+        //        {"Vendor", "I Buy Power"},
+        //        {"Date", "2020-12-06T17:30:59.0934534Z" },
+        //        {"Status", "true" }
+        //    };
 
-            string strPaylod = JsonConvert.SerializeObject(payload, Formatting.Indented);
-            HttpContent httpContent = new StringContent(strPaylod, Encoding.UTF8, "application/json");
+        //    string strPaylod = JsonConvert.SerializeObject(payload, Formatting.Indented);
+        //    HttpContent httpContent = new StringContent(strPaylod, Encoding.UTF8, "application/json");
 
-            HttpRequestMessage request = new HttpRequestMessage
-            {
-                Method = new HttpMethod(httpMethod),
-                Content = httpContent,
-                RequestUri = new Uri($"https://localhost:44397/api/peripherals")
-            };
+        //    HttpRequestMessage request = new HttpRequestMessage
+        //    {
+        //        Method = new HttpMethod(httpMethod),
+        //        Content = httpContent,
+        //        RequestUri = new Uri($"https://localhost:44397/api/peripherals")
+        //    };
 
-            // Act
-            var response = await _client.SendAsync(request);
+        //    // Act
+        //    var response = await _client.SendAsync(request);
 
-            // Assert
-            Assert.Equal(HttpStatusCode.Created, response.StatusCode);
-        }
+        //    // Assert
+        //    Assert.Equal(HttpStatusCode.Created, response.StatusCode);
+        //}
 
         [Theory]
         [InlineData("DELETE", 1)]

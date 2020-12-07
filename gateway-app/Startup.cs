@@ -74,6 +74,9 @@ namespace gateway_app
                         {
                             new Peripheral() {Date = DateTime.UtcNow, Status = true, Vendor = "Logitec", UID = rnd.Next(100000, 1000000)},
                             new Peripheral() {Date = DateTime.UtcNow, Status = true, Vendor = "Dell", UID = rnd.Next(100000, 1000000)},
+                            new Peripheral() {Date = DateTime.UtcNow, Status = false, Vendor = "Asus", UID = rnd.Next(100000, 1000000)},
+                            new Peripheral() {Date = DateTime.UtcNow, Status = true, Vendor = "Logitec", UID = rnd.Next(100000, 1000000)},
+                            new Peripheral() {Date = DateTime.UtcNow, Status = true, Vendor = "Dell", UID = rnd.Next(100000, 1000000)},
                             new Peripheral() {Date = DateTime.UtcNow, Status = false, Vendor = "Asus", UID = rnd.Next(100000, 1000000)}
                         } },
                     new Gateway() {Name = "CISCO 02", SerialNumber = "1234565432", Ipv4 = "10.6.100.67"},

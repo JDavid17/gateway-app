@@ -72,26 +72,38 @@ namespace gateway_app.Controllers
         }
 
         //POST: api/gateways/1/add_peripheral
-        //[HttpPost("{id}/add_peripheral")]
-        //public async Task<ActionResult<Gateway>> AddPeripheral(int id, Peripheral peripheral)
-        //{
-        //    peripheral.GatewayId = id;
+        [HttpPost("{id}/add_peripheral")]
+        public async Task<ActionResult<Gateway>> AddPeripheral(int id, Peripheral peripheral)
+        {
+            peripheral.GatewayId = id;
 
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return BadRequest();
-        //    }
+            var gateway = await _context.Gateways.Include(x => x.Peripherals).FirstOrDefaultAsync(g => g.Id == id);
 
-        //    _context.Peripherals.Add(peripheral);
-        //    await _context.SaveChangesAsync();
+            if (gateway.Peripherals.Count >= 10)
+            {
+                return BadRequest("Gateway already has the max number of allow peripherals");
+            }
 
-        //    return CreatedAtAction("GetGateway", new { id = id }, peripheral.Gateway);
-        //}
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
+            _context.Peripherals.Add(peripheral);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("GetGateway", new { id = id }, peripheral.Gateway);
+        }
 
         // POST: api/gateways
         [HttpPost]
         public async Task<ActionResult<Gateway>> PostGateway(Gateway gateway)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
             _context.Gateways.Add(gateway);
             await _context.SaveChangesAsync();
 
@@ -102,10 +114,17 @@ namespace gateway_app.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Gateway>> DeleteGateway(int id)
         {
-            var gateway = await _context.Gateways.FindAsync(id);
+            var gateway = await _context.Gateways.Include(x => x.Peripherals).FirstOrDefaultAsync(g => g.Id == id);
+
             if (gateway == null)
             {
                 return NotFound();
+            }
+
+            //// Manually Remove Peripherals
+            foreach (var peripheral in gateway.Peripherals)
+            {
+                _context.Peripherals.Remove(peripheral);
             }
 
             _context.Gateways.Remove(gateway);
