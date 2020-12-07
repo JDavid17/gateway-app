@@ -146,7 +146,7 @@ namespace gateway_app.IntegrationTest.API
         }
 
         [Theory]
-        [InlineData("DELETE", 1)]
+        [InlineData("DELETE", 2)]
         public async Task DeleteGatewayTest6(string httpMethod, int? id = null)
         {
             // Arrange

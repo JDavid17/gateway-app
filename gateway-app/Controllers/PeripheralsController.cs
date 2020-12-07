@@ -50,11 +50,14 @@ namespace gateway_app.Controllers
                 return BadRequest();
             }
 
-            var gateway = await _context.Gateways.Include(x => x.Peripherals).FirstOrDefaultAsync(g => g.Id == peripheral.GatewayId);
-
-            if (gateway.Peripherals.Count >= 10)
+            if (peripheral.GatewayId > 0)
             {
-                return BadRequest("Gateway already has the max number of allow peripherals");
+                var gateway = await _context.Gateways.Include(x => x.Peripherals).FirstOrDefaultAsync(g => g.Id == peripheral.GatewayId);
+
+                if (gateway.Peripherals.Count >= 10)
+                {
+                    return BadRequest("Gateway already has the max number of allow peripherals");
+                }
             }
 
             _context.Entry(peripheral).State = EntityState.Modified;

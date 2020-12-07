@@ -14,11 +14,17 @@ namespace gateway_app.CustomValidation
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
             var gateway = (Gateway)validationContext.ObjectInstance;
-            var cnt = gateway.Peripherals.Count();
-
-            if (cnt > 10)
+            try
             {
-                return new ValidationResult(PeripheralErrorMessage());
+                var cnt = gateway.Peripherals.Count();
+
+                if (cnt >= 10)
+                {
+                    return new ValidationResult(PeripheralErrorMessage());
+                }
+            }
+            catch (Exception)
+            {
             }
 
             return ValidationResult.Success;
