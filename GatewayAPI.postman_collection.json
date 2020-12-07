@@ -1,0 +1,679 @@
+{
+	"info": {
+		"_postman_id": "7904f705-8726-46e7-88de-83aba94964c3",
+		"name": "GatewayAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "Gateways",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "/api/Gateways/:id",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Gateways/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Gateways",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Gateways/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Gateways",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n \"id\": \"<integer>\",\n \"serialNumber\": \"<string>\",\n \"name\": \"<string>\",\n \"ipv4\": \"<string>\",\n \"peripherals\": [\n  {\n   \"id\": 38019890,\n   \"uid\": -45278050,\n   \"vendor\": \"ullamco aute ut sint minim\",\n   \"date\": \"1969-03-24T03:08:37.869Z\",\n   \"status\": false,\n   \"gatewayId\": -50726680,\n   \"gateway\": {\n    \"value\": \"<Circular reference to #/components/schemas/Gateway detected>\"\n   }\n  },\n  {\n   \"id\": 26309691,\n   \"uid\": 9141270,\n   \"vendor\": \"laborum non fugiat nisi quis\",\n   \"date\": \"2009-01-24T12:37:02.905Z\",\n   \"status\": false,\n   \"gatewayId\": -76910797,\n   \"gateway\": {\n    \"value\": \"<Circular reference to #/components/schemas/Gateway detected>\"\n   }\n  }\n ]\n}"
+										}
+									]
+								},
+								{
+									"name": "/api/Gateways/:id",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": 7,\n    \"serialNumber\": \"7416523\",\n    \"name\": \"New CISCO 777 Updated\",\n    \"ipv4\": \"10.67.100.67\",\n    \"peripherals\": [\n        {\n            \"id\": 4,\n            \"uid\": 987643,\n            \"vendor\": \"Asus Rog Strix Updated\",\n            \"date\": \"2020-12-07T01:29:52.7583643Z\",\n            \"status\": true,\n            \"gatewayId\": 7\n        }\n    ]\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Gateways/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Gateways",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "7",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"id\": \"<integer>\",\n    \"serialNumber\": \"<string>\",\n    \"name\": \"<string>\",\n    \"ipv4\": \"<string>\",\n    \"peripherals\": [\n        {\n            \"id\": 38019890,\n            \"uid\": -45278050,\n            \"vendor\": \"ullamco aute ut sint minim\",\n            \"date\": \"1969-03-24T03:08:37.869Z\",\n            \"status\": false,\n            \"gatewayId\": -50726680,\n            \"gateway\": {\n                \"value\": \"<Circular reference to #/components/schemas/Gateway detected>\"\n            }\n        },\n        {\n            \"id\": 26309691,\n            \"uid\": 9141270,\n            \"vendor\": \"laborum non fugiat nisi quis\",\n            \"date\": \"2009-01-24T12:37:02.905Z\",\n            \"status\": false,\n            \"gatewayId\": -76910797,\n            \"gateway\": {\n                \"value\": \"<Circular reference to #/components/schemas/Gateway detected>\"\n            }\n        }\n    ]\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Gateways/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Gateways",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/api/Gateways/:id",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Gateways/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Gateways",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "5",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Gateways/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Gateways",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n \"id\": \"<integer>\",\n \"serialNumber\": \"<string>\",\n \"name\": \"<string>\",\n \"ipv4\": \"<string>\",\n \"peripherals\": [\n  {\n   \"id\": 38019890,\n   \"uid\": -45278050,\n   \"vendor\": \"ullamco aute ut sint minim\",\n   \"date\": \"1969-03-24T03:08:37.869Z\",\n   \"status\": false,\n   \"gatewayId\": -50726680,\n   \"gateway\": {\n    \"value\": \"<Circular reference to #/components/schemas/Gateway detected>\"\n   }\n  },\n  {\n   \"id\": 26309691,\n   \"uid\": 9141270,\n   \"vendor\": \"laborum non fugiat nisi quis\",\n   \"date\": \"2009-01-24T12:37:02.905Z\",\n   \"status\": false,\n   \"gatewayId\": -76910797,\n   \"gateway\": {\n    \"value\": \"<Circular reference to #/components/schemas/Gateway detected>\"\n   }\n  }\n ]\n}"
+										}
+									]
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "/api/Gateways",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/Gateways",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Gateways"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Gateways",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Gateways"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n {\n  \"id\": -59776506,\n  \"serialNumber\": \"ad velit et in\",\n  \"name\": \"consectetur sit dolore pariatur qui\",\n  \"ipv4\": \"velit deserunt reprehenderit exe\",\n  \"peripherals\": [\n   {\n    \"id\": 37073103,\n    \"uid\": 62846831,\n    \"vendor\": \"in\",\n    \"date\": \"1976-09-06T02:04:08.873Z\",\n    \"status\": true,\n    \"gatewayId\": 75307829,\n    \"gateway\": {\n     \"value\": \"<Circular reference to #/components/schemas/Gateway detected>\"\n    }\n   },\n   {\n    \"id\": -56410511,\n    \"uid\": 83197138,\n    \"vendor\": \"proident enim reprehenderit veniam Duis\",\n    \"date\": \"1975-11-17T09:55:12.114Z\",\n    \"status\": true,\n    \"gatewayId\": 6649835,\n    \"gateway\": {\n     \"value\": \"<Circular reference to #/components/schemas/Gateway detected>\"\n    }\n   }\n  ]\n },\n {\n  \"id\": -61678213,\n  \"serialNumber\": \"dolor nisi nulla ex adipisicing\",\n  \"name\": \"minim tempor a\",\n  \"ipv4\": \"labore nulla consectetur\",\n  \"peripherals\": [\n   {\n    \"id\": 69728200,\n    \"uid\": -91907252,\n    \"vendor\": \"cillum in et magna\",\n    \"date\": \"2012-11-10T19:35:23.695Z\",\n    \"status\": false,\n    \"gatewayId\": -18729928,\n    \"gateway\": {\n     \"value\": \"<Circular reference to #/components/schemas/Gateway detected>\"\n    }\n   },\n   {\n    \"id\": 26759731,\n    \"uid\": 55900182,\n    \"vendor\": \"mollit qui\",\n    \"date\": \"1986-02-20T09:51:07.465Z\",\n    \"status\": true,\n    \"gatewayId\": 89846312,\n    \"gateway\": {\n     \"value\": \"<Circular reference to #/components/schemas/Gateway detected>\"\n    }\n   }\n  ]\n }\n]"
+								}
+							]
+						},
+						{
+							"name": "/api/Gateways",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"serialNumber\": \"7456123\",\n    \"name\": \"New CISCO 777\",\n    \"ipv4\": \"10.67.100.66\",\n    \"peripherals\": [\n        {\n            \"uid\": \"0987643\",\n            \"vendor\": \"Asus Rog Strix Updated\",\n            \"date\": \"2020-12-07T01:29:52.7583643Z\",\n            \"status\": true\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Gateways",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Gateways"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": \"<integer>\",\n    \"serialNumber\": \"<string>\",\n    \"name\": \"<string>\",\n    \"ipv4\": \"<string>\",\n    \"peripherals\": [\n        {\n            \"id\": 38019890,\n            \"uid\": -45278050,\n            \"vendor\": \"ullamco aute ut sint minim\",\n            \"date\": \"1969-03-24T03:08:37.869Z\",\n            \"status\": false,\n            \"gatewayId\": -50726680,\n            \"gateway\": {\n                \"value\": \"<Circular reference to #/components/schemas/Gateway detected>\"\n            }\n        },\n        {\n            \"id\": 26309691,\n            \"uid\": 9141270,\n            \"vendor\": \"laborum non fugiat nisi quis\",\n            \"date\": \"2009-01-24T12:37:02.905Z\",\n            \"status\": false,\n            \"gatewayId\": -76910797,\n            \"gateway\": {\n                \"value\": \"<Circular reference to #/components/schemas/Gateway detected>\"\n            }\n        }\n    ]\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Gateways",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Gateways"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"id\": \"<integer>\",\n \"serialNumber\": \"<string>\",\n \"name\": \"<string>\",\n \"ipv4\": \"<string>\",\n \"peripherals\": [\n  {\n   \"id\": 38019890,\n   \"uid\": -45278050,\n   \"vendor\": \"ullamco aute ut sint minim\",\n   \"date\": \"1969-03-24T03:08:37.869Z\",\n   \"status\": false,\n   \"gatewayId\": -50726680,\n   \"gateway\": {\n    \"value\": \"<Circular reference to #/components/schemas/Gateway detected>\"\n   }\n  },\n  {\n   \"id\": 26309691,\n   \"uid\": 9141270,\n   \"vendor\": \"laborum non fugiat nisi quis\",\n   \"date\": \"2009-01-24T12:37:02.905Z\",\n   \"status\": false,\n   \"gatewayId\": -76910797,\n   \"gateway\": {\n    \"value\": \"<Circular reference to #/components/schemas/Gateway detected>\"\n   }\n  }\n ]\n}"
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Peripherals",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "/api/Peripherals/:id",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Peripherals/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Peripherals",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "3",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Peripherals/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Peripherals",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n \"id\": \"<integer>\",\n \"uid\": \"<integer>\",\n \"vendor\": \"<string>\",\n \"date\": \"<dateTime>\",\n \"status\": \"<boolean>\",\n \"gatewayId\": \"<integer>\",\n \"gateway\": {\n  \"id\": \"<integer>\",\n  \"serialNumber\": \"<string>\",\n  \"name\": \"<string>\",\n  \"ipv4\": \"<string>\",\n  \"peripherals\": [\n   {\n    \"id\": \"<integer>\",\n    \"uid\": \"<integer>\",\n    \"vendor\": \"<string>\",\n    \"date\": \"<dateTime>\",\n    \"status\": \"<boolean>\",\n    \"gatewayId\": \"<integer>\",\n    \"gateway\": {\n     \"value\": \"<Circular reference to #/components/schemas/Gateway detected>\"\n    }\n   },\n   {\n    \"id\": \"<integer>\",\n    \"uid\": \"<integer>\",\n    \"vendor\": \"<string>\",\n    \"date\": \"<dateTime>\",\n    \"status\": \"<boolean>\",\n    \"gatewayId\": \"<integer>\",\n    \"gateway\": {\n     \"value\": \"<Circular reference to #/components/schemas/Gateway detected>\"\n    }\n   }\n  ]\n }\n}"
+										}
+									]
+								},
+								{
+									"name": "/api/Peripherals/:id",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n        \"id\": 2,\n        \"uid\": 734871,\n        \"vendor\": \"Logitec Updated\",\n        \"date\": \"2020-12-07T01:29:52.7583643Z\",\n        \"status\": true,\n        \"gatewayId\": 2,\n        \"gateway\": null\n    }"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Peripherals/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Peripherals",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "2",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"id\": \"<integer>\",\n    \"uid\": \"<integer>\",\n    \"vendor\": \"<string>\",\n    \"date\": \"<dateTime>\",\n    \"status\": \"<boolean>\",\n    \"gatewayId\": \"<integer>\",\n    \"gateway\": {\n        \"id\": \"<integer>\",\n        \"serialNumber\": \"<string>\",\n        \"name\": \"<string>\",\n        \"ipv4\": \"<string>\",\n        \"peripherals\": [\n            {\n                \"id\": \"<integer>\",\n                \"uid\": \"<integer>\",\n                \"vendor\": \"<string>\",\n                \"date\": \"<dateTime>\",\n                \"status\": \"<boolean>\",\n                \"gatewayId\": \"<integer>\",\n                \"gateway\": {\n                    \"value\": \"<Circular reference to #/components/schemas/Gateway detected>\"\n                }\n            },\n            {\n                \"id\": \"<integer>\",\n                \"uid\": \"<integer>\",\n                \"vendor\": \"<string>\",\n                \"date\": \"<dateTime>\",\n                \"status\": \"<boolean>\",\n                \"gatewayId\": \"<integer>\",\n                \"gateway\": {\n                    \"value\": \"<Circular reference to #/components/schemas/Gateway detected>\"\n                }\n            }\n        ]\n    }\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Peripherals/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Peripherals",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/api/Peripherals/:id",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Peripherals/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Peripherals",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Peripherals/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Peripherals",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n \"id\": \"<integer>\",\n \"uid\": \"<integer>\",\n \"vendor\": \"<string>\",\n \"date\": \"<dateTime>\",\n \"status\": \"<boolean>\",\n \"gatewayId\": \"<integer>\",\n \"gateway\": {\n  \"id\": \"<integer>\",\n  \"serialNumber\": \"<string>\",\n  \"name\": \"<string>\",\n  \"ipv4\": \"<string>\",\n  \"peripherals\": [\n   {\n    \"id\": \"<integer>\",\n    \"uid\": \"<integer>\",\n    \"vendor\": \"<string>\",\n    \"date\": \"<dateTime>\",\n    \"status\": \"<boolean>\",\n    \"gatewayId\": \"<integer>\",\n    \"gateway\": {\n     \"value\": \"<Circular reference to #/components/schemas/Gateway detected>\"\n    }\n   },\n   {\n    \"id\": \"<integer>\",\n    \"uid\": \"<integer>\",\n    \"vendor\": \"<string>\",\n    \"date\": \"<dateTime>\",\n    \"status\": \"<boolean>\",\n    \"gatewayId\": \"<integer>\",\n    \"gateway\": {\n     \"value\": \"<Circular reference to #/components/schemas/Gateway detected>\"\n    }\n   }\n  ]\n }\n}"
+										}
+									]
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "/api/Peripherals",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/Peripherals",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Peripherals"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Peripherals",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Peripherals"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n {\n  \"id\": 13054779,\n  \"uid\": 21021312,\n  \"vendor\": \"laboris esse occaecat \",\n  \"date\": \"1980-03-27T16:04:32.542Z\",\n  \"status\": true,\n  \"gatewayId\": -91327841,\n  \"gateway\": {\n   \"value\": \"<Circular reference to #/components/schemas/Gateway detected>\"\n  }\n },\n {\n  \"id\": 16779107,\n  \"uid\": 95244053,\n  \"vendor\": \"ut\",\n  \"date\": \"1996-09-26T21:29:56.482Z\",\n  \"status\": false,\n  \"gatewayId\": 72843790,\n  \"gateway\": {\n   \"value\": \"<Circular reference to #/components/schemas/Gateway detected>\"\n  }\n }\n]"
+								}
+							]
+						},
+						{
+							"name": "/api/Peripherals",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"uid\": 734178,\n    \"vendor\": \"Logitec\",\n    \"date\": \"2020-12-07T01:29:52.7583643Z\",\n    \"status\": true,\n    \"gatewayId\": 2\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Peripherals",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Peripherals"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": \"<integer>\",\n    \"uid\": \"<integer>\",\n    \"vendor\": \"<string>\",\n    \"date\": \"<dateTime>\",\n    \"status\": \"<boolean>\",\n    \"gatewayId\": \"<integer>\",\n    \"gateway\": {\n        \"id\": \"<integer>\",\n        \"serialNumber\": \"<string>\",\n        \"name\": \"<string>\",\n        \"ipv4\": \"<string>\",\n        \"peripherals\": [\n            {\n                \"id\": \"<integer>\",\n                \"uid\": \"<integer>\",\n                \"vendor\": \"<string>\",\n                \"date\": \"<dateTime>\",\n                \"status\": \"<boolean>\",\n                \"gatewayId\": \"<integer>\",\n                \"gateway\": {\n                    \"value\": \"<Circular reference to #/components/schemas/Gateway detected>\"\n                }\n            },\n            {\n                \"id\": \"<integer>\",\n                \"uid\": \"<integer>\",\n                \"vendor\": \"<string>\",\n                \"date\": \"<dateTime>\",\n                \"status\": \"<boolean>\",\n                \"gatewayId\": \"<integer>\",\n                \"gateway\": {\n                    \"value\": \"<Circular reference to #/components/schemas/Gateway detected>\"\n                }\n            }\n        ]\n    }\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Peripherals",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Peripherals"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"id\": \"<integer>\",\n \"uid\": \"<integer>\",\n \"vendor\": \"<string>\",\n \"date\": \"<dateTime>\",\n \"status\": \"<boolean>\",\n \"gatewayId\": \"<integer>\",\n \"gateway\": {\n  \"id\": \"<integer>\",\n  \"serialNumber\": \"<string>\",\n  \"name\": \"<string>\",\n  \"ipv4\": \"<string>\",\n  \"peripherals\": [\n   {\n    \"id\": \"<integer>\",\n    \"uid\": \"<integer>\",\n    \"vendor\": \"<string>\",\n    \"date\": \"<dateTime>\",\n    \"status\": \"<boolean>\",\n    \"gatewayId\": \"<integer>\",\n    \"gateway\": {\n     \"value\": \"<Circular reference to #/components/schemas/Gateway detected>\"\n    }\n   },\n   {\n    \"id\": \"<integer>\",\n    \"uid\": \"<integer>\",\n    \"vendor\": \"<string>\",\n    \"date\": \"<dateTime>\",\n    \"status\": \"<boolean>\",\n    \"gatewayId\": \"<integer>\",\n    \"gateway\": {\n     \"value\": \"<Circular reference to #/components/schemas/Gateway detected>\"\n    }\n   }\n  ]\n }\n}"
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "5ad6594b-6428-4c92-a3b2-e77b2389170c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "db3b61f1-d600-4381-98f7-266c015d86b5",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "6ff2d008-80e5-47fc-9a54-c2b3830c886d",
+			"key": "baseUrl",
+			"value": "https://localhost:44397"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
