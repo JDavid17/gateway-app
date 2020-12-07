@@ -9,7 +9,7 @@
 
 ### PostMan
 ----
-- A Postam Collection can be found here [Postman](./GatewayAPI.postman_collection)
+- A Postam Collection can be found here [Postman](./GatewayAPI.postman_collection.json)
 
 
 ### Api
