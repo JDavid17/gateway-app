@@ -85,35 +85,35 @@ namespace gateway_app.IntegrationTest.API
         }
 
         
-        [Theory]
-        [InlineData("POST", 1)]
-        public async Task AddPeripherialToGatewayTest4(string httpMethod, int? id = null)
-        {
-            // Arrange
-            var payload = new Dictionary<string, string>
-            {
-                {"UID", "777777" },
-                {"Vendor", "CyberPower"},
-                {"Date", "2020-12-06T17:30:59.0934534Z" },
-                {"Status", "true" }
-            };
+        //[Theory]
+        //[InlineData("POST", 1)]
+        //public async Task AddPeripherialToGatewayTest4(string httpMethod, int? id = null)
+        //{
+        //    // Arrange
+        //    var payload = new Dictionary<string, string>
+        //    {
+        //        {"UID", "777777" },
+        //        {"Vendor", "CyberPower"},
+        //        {"Date", "2020-12-06T17:30:59.0934534Z" },
+        //        {"Status", "true" }
+        //    };
 
-            string strPaylod = JsonConvert.SerializeObject(payload, Formatting.Indented);
-            HttpContent httpContent = new StringContent(strPaylod, Encoding.UTF8, "application/json");
+        //    string strPaylod = JsonConvert.SerializeObject(payload, Formatting.Indented);
+        //    HttpContent httpContent = new StringContent(strPaylod, Encoding.UTF8, "application/json");
 
-            HttpRequestMessage request = new HttpRequestMessage
-            {
-                Method = new HttpMethod(httpMethod),
-                Content = httpContent,
-                RequestUri = new Uri($"https://localhost:44397/api/gateways/{id}/add_peripheral")
-            };
+        //    HttpRequestMessage request = new HttpRequestMessage
+        //    {
+        //        Method = new HttpMethod(httpMethod),
+        //        Content = httpContent,
+        //        RequestUri = new Uri($"https://localhost:44397/api/gateways/{id}/add_peripheral")
+        //    };
 
-            // Act
-            var response = await _client.SendAsync(request);
+        //    // Act
+        //    var response = await _client.SendAsync(request);
 
-            // Assert
-            Assert.Equal(HttpStatusCode.Created, response.StatusCode);
-        }
+        //    // Assert
+        //    Assert.Equal(HttpStatusCode.Created, response.StatusCode);
+        //}
 
 
         [Theory]

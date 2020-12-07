@@ -72,21 +72,21 @@ namespace gateway_app.Controllers
         }
 
         //POST: api/gateways/1/add_peripheral
-        [HttpPost("{id}/add_peripheral")]
-        public async Task<ActionResult<Gateway>> AddPeripheral(int id, Peripheral peripheral)
-        {
-            peripheral.GatewayId = id;
+        //[HttpPost("{id}/add_peripheral")]
+        //public async Task<ActionResult<Gateway>> AddPeripheral(int id, Peripheral peripheral)
+        //{
+        //    peripheral.GatewayId = id;
 
-            if (!ModelState.IsValid)
-            {
-                return BadRequest();
-            }
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return BadRequest();
+        //    }
 
-            _context.Peripherals.Add(peripheral);
-            await _context.SaveChangesAsync();
+        //    _context.Peripherals.Add(peripheral);
+        //    await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetGateway", new { id = id }, peripheral.Gateway);
-        }
+        //    return CreatedAtAction("GetGateway", new { id = id }, peripheral.Gateway);
+        //}
 
         // POST: api/gateways
         [HttpPost]
